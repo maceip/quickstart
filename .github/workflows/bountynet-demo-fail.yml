@@ -1,0 +1,14 @@
+name: BountyNet Demo Fail
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  fail-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Force a failing run for BountyNet demo
+        run: |
+          echo "Intentional failure to demonstrate BountyNet CI scanning"
+          exit 1
